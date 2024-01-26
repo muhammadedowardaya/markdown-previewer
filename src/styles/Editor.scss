@@ -1,0 +1,39 @@
+@import './toolbar';
+
+.editor-wrap {
+	width: 85%;
+	max-width: 600px;
+	margin: 1rem auto 1rem;
+	box-shadow: 0 1px 10px 2px rgba(0, 0, 0, 0.3);
+
+	.toolbar {
+		@include toolbar();
+	}
+
+	#editor {
+		width: 100%;
+		min-height: 200px;
+		background-color: #f8fae5;
+		padding: 5px;
+		resize: none;
+		border: none;
+		box-sizing: border-box;
+		font-size: 14px;
+
+		&:focus-visible {
+			outline: none;
+		}
+
+		&.maximize {
+			height: 87vh;
+		}
+	}
+}
+
+@media (min-width: 800px) {
+    .editor-wrap {
+        #editor {
+            font-size: 18px;
+        }
+    }
+}

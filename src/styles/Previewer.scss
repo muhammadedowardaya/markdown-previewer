@@ -1,0 +1,82 @@
+@import './toolbar';
+
+.preview-wrap {
+	width: 95%;
+	max-width: 800px;
+	margin: 1rem auto;
+	box-shadow: 0 1px 10px 2px rgba(0, 0, 0, 0.3);
+
+	.toolbar {
+		@include toolbar();
+	}
+
+	#preview {
+		padding: 1rem;
+		background-color: #fff;
+
+		blockquote {
+			border-left: 3px solid #224b4b;
+			color: #224b4b;
+			padding-left: 5px;
+			margin-left: 25px;
+		}
+
+		& > p > code {
+			padding: 3px;
+		}
+
+		code:not(pre > code) {
+			font-size: 0.875rem;
+			font-weight: bold;
+            background-color: #76453B;
+            padding:2px 4px;
+            color:#fff;
+		}
+
+		pre {
+			display: block;
+			overflow: auto;
+			background: #0F1035;
+			padding: 5px;
+			line-height: 1.2;
+            color:#D5F0C1;
+		}
+
+		h1 {
+			border-bottom: 2px solid #224b4b;
+		}
+
+		h2 {
+			border-bottom: 1px solid #224b4b;
+		}
+
+		table {
+			border-collapse: collapse;
+
+            thead {
+                tr {
+                    background-color: #333;
+                    color:#fff;
+                }
+            }
+		}
+
+		td,
+		th {
+			border: 2px solid #224b4b;
+			padding-left: 5px;
+			padding-right: 5px;
+		}
+
+		img {
+			display: block;
+			max-width: 90%;
+			margin: 2rem auto;
+		}
+
+		&.maximize {
+			height: 88vh;
+			overflow-y: scroll;
+		}
+	}
+}
